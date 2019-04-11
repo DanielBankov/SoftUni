@@ -1,4 +1,4 @@
-![alt text](https://ibb.co/4txsKX9)
+D:\SoftUni/softuni.png?raw=true "Title"
 
 # SoftUni
 Software University - courses and modules

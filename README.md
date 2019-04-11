@@ -1,1 +1,1 @@
-# SoftUni Software University - courses and modules
+Software University - courses and modules

@@ -26,12 +26,19 @@ some text here..
 
 ### Topics
 > Programming Basics - Introduction
+
 > First Steps in Programming
+
 > Simple Calculation
+
 > Logical Checks
+
 > More complex logical checks 
+
 > Repeats (Loops)
+
 > Drawing Shapes with Loops
+
 > Advanced Loops 
 
 ### :heavy_check_mark: [Certificate](https://softuni.bg/certificates/details/20866/f6b6a060)

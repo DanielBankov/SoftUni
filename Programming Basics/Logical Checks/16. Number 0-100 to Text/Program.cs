@@ -10,10 +10,11 @@ namespace _16.Number_0_100_to_Text
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i <= 100; i++)
-            {
-                Console.WriteLine(i);
-            }
+            var st = "FETCHING RESULTSETS WITH ADO.NET";
+            Console.WriteLine(st.ToLower());
+
         }
     }
 }
+
+

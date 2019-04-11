@@ -21,10 +21,10 @@ sometext......
 
 # Programming Basics
 
-### About the course
+### :information_source: About the course
 some text here..
 
-### Topics
+### :notebook_with_decorative_cover:	 Topics
 > Programming Basics - Introduction
 
 > First Steps in Programming

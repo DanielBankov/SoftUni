@@ -43,3 +43,33 @@ some text here..
 
 ### :heavy_check_mark: [Certificate](https://softuni.bg/certificates/details/20866/f6b6a060)
 
+
+# Programming Fundamentals
+
+### :information_source: About the course
+some text here..
+
+### :notebook_with_decorative_cover:	 Topics
+> C# Intro and Basic Syntax
+
+> C# Conditional Statements and Loops
+
+> Data Types and Variables 
+
+> Methods, Debugging and Troubleshooting Code
+
+> Arrays 
+
+> Lists 
+
+> Dictionaries, Lambda Expressions and LINQ 
+
+> Objects and Classes 
+
+> Strings and Text Processing
+
+> Regular Expressions (RegEx)
+
+> Files and Exceptions
+
+### :heavy_check_mark: [Certificate](https://softuni.bg/certificates/details/53494/1cc5ae0a)

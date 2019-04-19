@@ -9,7 +9,7 @@ sometext......
 # Software engineering courses
 <!-- AUTO-GENERATED-CONTENT:START (SEM) -->
 #### :one: - [Programming Basics with C# - April 2017](#programming-basics)
-#### :two: - Programming Fundamentals - Extended - March 2018
+#### :two: - [Programming Fundamentals - Extended - March 2018](#programming-fundamentals)
 #### :three: - C# Advanced - September 2018 
 #### :four: - C# OOP Basics - October 2018
 #### :five: - C# OOP Advanced - November 2018

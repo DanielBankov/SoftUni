@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda", "Panda\Panda.csproj", "{57358B34-6839-4080-870D-6A105ADCD74F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Data", "Panda.Data\Panda.Data.csproj", "{3930F259-5822-4C54-AC35-FE6B665C0474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Domain", "Panda.Domain\Panda.Domain.csproj", "{6EAE592D-1A78-4F84-8D13-5203DC37A996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57358B34-6839-4080-870D-6A105ADCD74F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57358B34-6839-4080-870D-6A105ADCD74F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57358B34-6839-4080-870D-6A105ADCD74F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57358B34-6839-4080-870D-6A105ADCD74F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3930F259-5822-4C54-AC35-FE6B665C0474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3930F259-5822-4C54-AC35-FE6B665C0474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3930F259-5822-4C54-AC35-FE6B665C0474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3930F259-5822-4C54-AC35-FE6B665C0474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EAE592D-1A78-4F84-8D13-5203DC37A996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAE592D-1A78-4F84-8D13-5203DC37A996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAE592D-1A78-4F84-8D13-5203DC37A996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAE592D-1A78-4F84-8D13-5203DC37A996}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DAF8B35-E3D8-4331-A4F6-B05B538B5D55}
+	EndGlobalSection
+EndGlobal

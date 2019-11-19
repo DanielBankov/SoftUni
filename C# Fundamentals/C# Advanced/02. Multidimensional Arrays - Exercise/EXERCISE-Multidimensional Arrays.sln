@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rubik’s Matrix", "Rubik’s Matrix\Rubik’s Matrix.csproj", "{5E4B6B51-6BE3-43C7-A497-73C19B89CF85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{C6B8B179-3FEF-4B88-9481-E3A2625AA9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Target Practice", "Target Practice\Target Practice.csproj", "{8C076DEE-200E-4449-A0EB-1C0766505172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximal Sum", "Maximal Sum\Maximal Sum.csproj", "{51ADD462-D84C-4A27-A710-C8DDD2A81744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squares in Matrix", "Squares in Matrix\Squares in Matrix.csproj", "{38722052-8156-4C6C-ADBF-F1F6284CDA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagonal Difference", "Diagonal Difference\Diagonal Difference.csproj", "{66CDA3A7-7693-41F3-9785-7A9E92136469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix of Palindromes", "Matrix of Palindromes\Matrix of Palindromes.csproj", "{2912A491-E9C6-41AA-9598-076D90B835B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E4B6B51-6BE3-43C7-A497-73C19B89CF85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4B6B51-6BE3-43C7-A497-73C19B89CF85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4B6B51-6BE3-43C7-A497-73C19B89CF85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4B6B51-6BE3-43C7-A497-73C19B89CF85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B8B179-3FEF-4B88-9481-E3A2625AA9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B8B179-3FEF-4B88-9481-E3A2625AA9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B8B179-3FEF-4B88-9481-E3A2625AA9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B8B179-3FEF-4B88-9481-E3A2625AA9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C076DEE-200E-4449-A0EB-1C0766505172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C076DEE-200E-4449-A0EB-1C0766505172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C076DEE-200E-4449-A0EB-1C0766505172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C076DEE-200E-4449-A0EB-1C0766505172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51ADD462-D84C-4A27-A710-C8DDD2A81744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51ADD462-D84C-4A27-A710-C8DDD2A81744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51ADD462-D84C-4A27-A710-C8DDD2A81744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51ADD462-D84C-4A27-A710-C8DDD2A81744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38722052-8156-4C6C-ADBF-F1F6284CDA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38722052-8156-4C6C-ADBF-F1F6284CDA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38722052-8156-4C6C-ADBF-F1F6284CDA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38722052-8156-4C6C-ADBF-F1F6284CDA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CDA3A7-7693-41F3-9785-7A9E92136469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CDA3A7-7693-41F3-9785-7A9E92136469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CDA3A7-7693-41F3-9785-7A9E92136469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CDA3A7-7693-41F3-9785-7A9E92136469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2912A491-E9C6-41AA-9598-076D90B835B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2912A491-E9C6-41AA-9598-076D90B835B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2912A491-E9C6-41AA-9598-076D90B835B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2912A491-E9C6-41AA-9598-076D90B835B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB92BA1D-FF69-4C1B-A108-9B3FDBEAB449}
+	EndGlobalSection
+EndGlobal

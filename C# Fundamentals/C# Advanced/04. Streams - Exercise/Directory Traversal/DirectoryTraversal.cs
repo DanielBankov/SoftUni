@@ -9,45 +9,39 @@ namespace _07.DirectoryTraversal
     {
         static void Main()
         {
-            string path = Console.ReadLine();
-            var files = Directory.GetFiles(path);
-            var fileExtensions = new Dictionary<string, List<FileInfo>>();
+            var peopleInput = Console.ReadLine().Split().ToArray();
 
-            foreach (var file in files)
+            var input = Console.ReadLine().Split(' ');
+
+            while (input[0] != "end")
             {
-                var fileInfo = new FileInfo(file);
-                var extension = fileInfo.Extension;
+                var firstPerson = input[0];
+                var secondPerson = input[3];
+                var state = input[2];
 
-                if (!fileExtensions.ContainsKey(extension))
+                var firstPersonIndex = Array.IndexOf(peopleInput, firstPerson);
+                var secondPersonIndex = Array.IndexOf(peopleInput, secondPerson);
+
+                if (state == "after" && firstPersonIndex < secondPersonIndex)
                 {
-                    fileExtensions[extension] = new List<FileInfo>();
+                    Swap(peopleInput, firstPersonIndex, secondPersonIndex);
                 }
-                fileExtensions[extension].Add(fileInfo);
+                else if (state == "before" && firstPersonIndex > secondPersonIndex)
+                {
+                    Swap(peopleInput, firstPersonIndex, secondPersonIndex);
+                }
+
+                input = Console.ReadLine().Split(' ');
             }
 
-            fileExtensions = fileExtensions
-                .OrderByDescending(x => x.Value.Count)
-                .ThenBy(x => x.Key)
-                .ToDictionary(x => x.Key, y => y.Value);
+            Console.WriteLine(string.Join(' ', peopleInput));
+        }
 
-            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string fullFimeName = desktop + "/report.txt";
-
-            using (var writer = new StreamWriter(fullFimeName))
-            {
-                foreach (var kvp in fileExtensions)
-                {
-                    var extension = kvp.Key;
-                    var infoList = kvp.Value;
-
-                    writer.WriteLine(extension);
-                    foreach (var item in infoList.OrderBy(x => x.Length))
-                    {
-                        var fileSize = (double)item.Length / 1024;
-                        writer.WriteLine($"--{item.Name} - {fileSize:F3}");
-                    }
-                }
-            }
+        private static void Swap(string[] peopleInput, int firstPersonIndex, int secondPersonIndex)
+        {
+            var temp = peopleInput[firstPersonIndex];
+            peopleInput[firstPersonIndex] = peopleInput[secondPersonIndex];
+            peopleInput[secondPersonIndex] = temp;
         }
     }
 }

@@ -1,0 +1,117 @@
+﻿using SimpleSnake.GameObjects.Foods;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace SimpleSnake.GameObjects
+{
+    public class Snake
+    {
+        private const char snakeSymbol = '\u25CF';
+
+        private Queue<Point> snakeElements;
+        private Food[] foods;
+        private Wall wall;
+
+        private int nextLeftX;
+        private int nextTopY;
+        private int foodIndex;
+
+        public Snake(Wall wall)
+        {
+            this.wall = wall;
+            this.foods = new Food[3];
+            this.foodIndex = this.RandomFoodNumber;
+            this.snakeElements = new Queue<Point>();
+            this.GetFoods();
+            this.CreateSnake();
+            this.SetPlayerPoints(0);
+        }
+
+        private int RandomFoodNumber => new Random().Next(0, foods.Length);
+
+        public int TotalPoints { get; private set; }
+
+        public bool IsMoving(Point direction)
+        {
+            Point currentSnakeHead = this.snakeElements.Last();
+
+            GetNextPoint(direction, currentSnakeHead);
+
+            bool isPointOfSnake = this.snakeElements.Any(e => e.LeftX == this.nextLeftX && e.TopY == this.nextTopY);
+
+            if (isPointOfSnake)
+            {
+                return false;
+            }
+            
+            Point newSnakeHead = new Point(this.nextLeftX, this.nextTopY);
+
+            if (this.wall.IsPointOfWall(newSnakeHead))
+            {
+                return false;
+            }
+
+            this.snakeElements.Enqueue(newSnakeHead);
+            newSnakeHead.Draw(snakeSymbol);
+
+            if (this.foods[this.foodIndex].IsFoodPoint(newSnakeHead))
+            {
+                this.Eat(direction, currentSnakeHead);
+            }
+
+            Point snakeTail = this.snakeElements.Dequeue();
+            snakeTail.Draw(' ');
+
+            return true;
+        }
+
+        private void CreateSnake()
+        {
+            for (int leftX = 1; leftX <= 6; leftX++)
+            {
+                this.snakeElements.Enqueue(new Point(leftX, 2));
+            }
+
+            this.foods[foodIndex].SetRandomPosition(this.snakeElements);
+        }
+
+        private void Eat(Point direction, Point currentSnakeHead)
+        {
+            int currFoodPoint = this.foods[this.foodIndex].FoodPoints;
+            SetPlayerPoints(currFoodPoint);
+
+            //Increase snake length according what is eaten
+            for (int i = 0; i < currFoodPoint; i++)
+            {
+                this.snakeElements.Enqueue(new Point(this.nextLeftX, this.nextTopY));
+                this.GetNextPoint(direction, currentSnakeHead);
+            }
+
+            this.foodIndex = this.RandomFoodNumber;
+            this.foods[foodIndex].SetRandomPosition(this.snakeElements);
+        }
+
+        private void SetPlayerPoints(int currFoodPoint)
+        {
+            TotalPoints += currFoodPoint;
+
+            Console.SetCursorPosition(this.wall.LeftX + 2, 1);
+            Console.Write($"Points: {TotalPoints}");
+        }
+
+        private void GetFoods()
+        {
+            this.foods[0] = new FoodAsterisk(this.wall);
+            this.foods[1] = new FoodDollar(this.wall);
+            this.foods[2] = new FoodHash(this.wall);
+        }
+
+        private void GetNextPoint(Point direction, Point snakeHead)
+        {
+            this.nextLeftX = snakeHead.LeftX + direction.LeftX;
+            this.nextTopY = snakeHead.TopY + direction.TopY;
+        }
+    }
+}

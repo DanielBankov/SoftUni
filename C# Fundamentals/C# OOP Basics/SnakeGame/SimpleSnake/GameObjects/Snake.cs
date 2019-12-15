@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SimpleSnake.GameObjects
 {
@@ -12,21 +11,19 @@ namespace SimpleSnake.GameObjects
 
         private Queue<Point> snakeElements;
         private Food[] foods;
-        private Wall wall;
 
         private int nextLeftX;
         private int nextTopY;
         private int foodIndex;
 
-        public Snake(Wall wall)
+        public Snake()
         {
-            this.wall = wall;
             this.foods = new Food[3];
             this.foodIndex = this.RandomFoodNumber;
             this.snakeElements = new Queue<Point>();
             this.GetFoods();
             this.CreateSnake();
-            this.SetPlayerPoints(0);
+            //this.SetPlayerPoints(0);
         }
 
         private int RandomFoodNumber => new Random().Next(0, foods.Length);
@@ -38,6 +35,7 @@ namespace SimpleSnake.GameObjects
             Point currentSnakeHead = this.snakeElements.Last();
 
             GetNextPoint(direction, currentSnakeHead);
+            IfSnkaeHitBorderContinueOtherSide();
 
             bool isPointOfSnake = this.snakeElements.Any(e => e.LeftX == this.nextLeftX && e.TopY == this.nextTopY);
 
@@ -45,13 +43,8 @@ namespace SimpleSnake.GameObjects
             {
                 return false;
             }
-            
-            Point newSnakeHead = new Point(this.nextLeftX, this.nextTopY);
 
-            if (this.wall.IsPointOfWall(newSnakeHead))
-            {
-                return false;
-            }
+            Point newSnakeHead = new Point(this.nextLeftX, this.nextTopY);
 
             this.snakeElements.Enqueue(newSnakeHead);
             newSnakeHead.Draw(snakeSymbol);
@@ -67,6 +60,26 @@ namespace SimpleSnake.GameObjects
             return true;
         }
 
+        private void IfSnkaeHitBorderContinueOtherSide()
+        {
+            if (this.nextLeftX == -1)
+            {
+                this.nextLeftX = Console.WindowWidth - 1;
+            }
+            else if (this.nextLeftX == Console.WindowWidth)
+            {
+                this.nextLeftX = 0;
+            }
+            else if (this.nextTopY == -1)
+            {
+                this.nextTopY = Console.WindowHeight - 1;
+            }
+            else if (this.nextTopY == Console.WindowHeight)
+            {
+                this.nextTopY = 0;
+            }
+        }
+
         private void CreateSnake()
         {
             for (int leftX = 1; leftX <= 6; leftX++)
@@ -80,7 +93,7 @@ namespace SimpleSnake.GameObjects
         private void Eat(Point direction, Point currentSnakeHead)
         {
             int currFoodPoint = this.foods[this.foodIndex].FoodPoints;
-            SetPlayerPoints(currFoodPoint);
+            //SetPlayerPoints(currFoodPoint);
 
             //Increase snake length according what is eaten
             for (int i = 0; i < currFoodPoint; i++)
@@ -93,19 +106,19 @@ namespace SimpleSnake.GameObjects
             this.foods[foodIndex].SetRandomPosition(this.snakeElements);
         }
 
-        private void SetPlayerPoints(int currFoodPoint)
-        {
-            TotalPoints += currFoodPoint;
-
-            Console.SetCursorPosition(this.wall.LeftX + 2, 1);
-            Console.Write($"Points: {TotalPoints}");
-        }
+        //private void SetPlayerPoints(int currFoodPoint)
+        //{
+        //    TotalPoints += currFoodPoint;
+        //
+        //    Console.SetCursorPosition(this.wall.LeftX + 2, 1);
+        //    Console.Write($"Points: {TotalPoints}");
+        //}
 
         private void GetFoods()
         {
-            this.foods[0] = new FoodAsterisk(this.wall);
-            this.foods[1] = new FoodDollar(this.wall);
-            this.foods[2] = new FoodHash(this.wall);
+            this.foods[0] = new FoodAsterisk();
+            this.foods[1] = new FoodDollar();
+            this.foods[2] = new FoodHash();
         }
 
         private void GetNextPoint(Point direction, Point snakeHead)

@@ -7,6 +7,11 @@ namespace SimpleSnake.GameObjects
         private int leftX;
         private int topY;
 
+        public Point()
+        {
+
+        }
+
         public Point(int leftX, int topY)
         {
             this.LeftX = leftX;

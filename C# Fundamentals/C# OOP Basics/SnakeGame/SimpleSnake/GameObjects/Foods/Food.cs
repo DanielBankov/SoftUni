@@ -8,13 +8,10 @@ namespace SimpleSnake.GameObjects.Foods
     {
         private char foodSymbol;
         private Random random;
-        private Wall wall;
 
-        public Food(Wall wall, char foodSymbol, int points)
-            : base(wall.LeftX, wall.TopY)
+        public Food(char foodSymbol, int points)
         {
             this.foodSymbol = foodSymbol;
-            this.wall = wall;
             this.FoodPoints = points;
             this.random = new Random();
         }
@@ -30,9 +27,7 @@ namespace SimpleSnake.GameObjects.Foods
                 isPointOfSnake = IsPointOfSnake(snakeElements);
             }
 
-            //Console.BackgroundColor = ConsoleColor.Red;
             this.Draw(foodSymbol);
-            //Console.BackgroundColor = ConsoleColor.White;
         }
 
         public bool IsFoodPoint(Point snake)
@@ -42,8 +37,8 @@ namespace SimpleSnake.GameObjects.Foods
 
         private bool IsPointOfSnake(Queue<Point> snakeElements)
         {
-            this.LeftX = random.Next(2, wall.LeftX - 2);
-            this.TopY = random.Next(2, wall.TopY - 2);
+            this.LeftX = random.Next(2, Console.WindowWidth);
+            this.TopY = random.Next(2, Console.WindowHeight);
 
             return snakeElements.Any(p => p.LeftX == this.LeftX && p.TopY == this.TopY);
         }

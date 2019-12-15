@@ -11,7 +11,6 @@
             ConsoleWindow.CustomizeConsole();
 
             Snake snake = new Snake();
-
             Engine engine = new Engine(snake);
             engine.Run();
         }

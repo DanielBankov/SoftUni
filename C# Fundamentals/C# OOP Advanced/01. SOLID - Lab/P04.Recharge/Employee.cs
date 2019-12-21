@@ -1,22 +1,22 @@
-﻿namespace P04.Recharge
-{
-    using System;
+﻿using System;
 
+namespace P04.Recharge
+{
     public class Employee : Worker, ISleeper
     {
-        public Employee(string id) : base(id)
+        public Employee(string id) 
+            : base(id)
         {
         }
 
-        public override void Sleep()
+        public void Sleep()
         {
-            // sleep...
+            Console.WriteLine("Sleeping..");
         }
 
-        public override void Recharge()
+        public override void Work(int hours)
         {
-            throw new InvalidOperationException("Employees cannot recharge");
+            this.WorkingHours += hours;
         }
-        
     }
 }

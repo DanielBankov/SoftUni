@@ -2,10 +2,9 @@
 {
     public class StreamProgressInfo
     {
-        private IStreamable file;
+        private File file;
 
-        // If we want to stream a music file, we can't
-        public StreamProgressInfo(IStreamable file)
+        public StreamProgressInfo(File file)
         {
             this.file = file;
         }

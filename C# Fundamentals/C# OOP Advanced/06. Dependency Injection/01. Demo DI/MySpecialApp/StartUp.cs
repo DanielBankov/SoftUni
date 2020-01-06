@@ -1,8 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CustomDI;
 using MySpecialApp.Contracts;
 using MySpecialApp.Core;
 using MySpecialApp.Models;
-using System;
 
 namespace MySpecialApp
 {
@@ -10,22 +9,25 @@ namespace MySpecialApp
     {
         public static void Main()
         {
-            IServiceProvider serviceProvider = ConfigureServices();
-            var engine = serviceProvider.GetService<IEngine>();
+            IServiceCollection serviceProvider = ConfigureServices();
+            var engine = (Engine)serviceProvider.CreateInstance(typeof(IEngine));
             engine.Run();
+
+            //With generic
+            //var engine2 = serviceProvider.CreateInstance<IEngine>();
+            //engine2.Run();
         }
 
-        private static IServiceProvider ConfigureServices()
+        private static IServiceCollection ConfigureServices()
         {
             IServiceCollection serviceCollection = new ServiceCollection();
 
-            serviceCollection.AddTransient<IEngine, Engine>();
-            serviceCollection.AddTransient<IReader, ConsoleReader>();
-            serviceCollection.AddTransient<IWriter, ConsoleWriter>();
-            serviceCollection.AddTransient<IWriter, FileWriter>();
+            serviceCollection.AddService<IEngine, Engine>();
+            serviceCollection.AddService<IReader, ConsoleReader>();
+            serviceCollection.AddService<IWriter, ConsoleWriter>();
+            serviceCollection.AddService<IWriter, FileWriter>();
 
-            var serviceProvider = serviceCollection.BuildServiceProvider();
-            return serviceProvider;
+            return serviceCollection;
         }
     }
 }

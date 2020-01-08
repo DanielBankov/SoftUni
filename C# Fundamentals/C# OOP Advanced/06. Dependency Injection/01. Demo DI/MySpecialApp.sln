@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySpecialApp", "MySpecialApp\MySpecialApp.csproj", "{C568B400-D85F-491A-94CB-96A445493119}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDI", "CustomDI\CustomDI.csproj", "{86114E28-A924-4E0A-A0D9-40F8462D8C9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomDI", "CustomDI\CustomDI.csproj", "{86114E28-A924-4E0A-A0D9-40F8462D8C9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

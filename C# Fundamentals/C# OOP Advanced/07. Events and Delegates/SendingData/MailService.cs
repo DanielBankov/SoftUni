@@ -4,9 +4,9 @@ namespace SendingData
 {
     public class MailService
     {
-        public void OnMailSendWhenDataSended(object source, EventArgs e)
+        public void OnMailSendWhenDataSended(object source, DataModelEventArgs e)
         {
-            Console.WriteLine("Message send.");
+            Console.WriteLine($"Message {e.DataModel.Context} send.");
         }
     }
 }

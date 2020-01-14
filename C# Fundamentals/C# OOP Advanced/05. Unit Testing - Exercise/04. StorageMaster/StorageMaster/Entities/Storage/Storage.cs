@@ -43,6 +43,7 @@
 			}
 
 			var vehicle = this.garage[garageSlot];
+
 			if (vehicle == null)
 			{
 				throw new InvalidOperationException("No vehicle in this garage slot!");
@@ -54,8 +55,8 @@
 		public int SendVehicleTo(int garageSlot, Storage deliveryLocation)
 		{
 			var vehicle = GetVehicle(garageSlot);
-
 			var deliveryGarageHasFreeSlot = deliveryLocation.Garage.Any(v => v == null);
+
 			if (!deliveryGarageHasFreeSlot)
 			{
 				throw new InvalidOperationException("No room in garage!");
@@ -75,8 +76,8 @@
 			}
 
 			var vehicle = GetVehicle(garageSlot);
-
 			var unloadedProductCount = 0;
+
 			while (!vehicle.IsEmpty && !this.IsFull)
 			{
 				var crate = vehicle.Unload();
@@ -91,6 +92,7 @@
 		private void InitializeGarage(IEnumerable<Vehicle> vehicles)
 		{
 			var garageSlot = 0;
+
 			foreach (var vehicle in vehicles)
 			{
 				this.garage[garageSlot++] = vehicle;

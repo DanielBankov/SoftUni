@@ -24,6 +24,7 @@
 			while (true)
 			{
 				var command = this.reader.ReadLine();
+
 				if (command == "END")
 				{
 					break;
@@ -51,6 +52,7 @@
 			var args = commandArgs.Skip(1).ToArray();
 
 			var output = string.Empty;
+
 			switch (commandName)
 			{
 				case "AddProduct":

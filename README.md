@@ -3,8 +3,9 @@
 </p>
 
 ---
-<p align="center">**This repository represent all my taken courses and modules.**</p>
+This repository represent all my taken courses and modules.
 ---
+
 # Software engineering courses
 <!-- AUTO-GENERATED-CONTENT:START (SEM) -->
 #### :point_right: - [Programming Basics with C# - April 2017](#programming-basics)

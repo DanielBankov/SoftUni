@@ -3,7 +3,7 @@
 </p>
 
 ---
-This repository represent all my taken courses and modules.
+**This repository represent all my taken courses and modules.**
 ---
 
 # Software engineering courses

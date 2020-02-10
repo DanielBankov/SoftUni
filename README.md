@@ -3,20 +3,19 @@
 </p>
 
 ---
-sometext......
-
+<p align="center">**This repository represent all my taken courses and modules.**</p>
 ---
 # Software engineering courses
 <!-- AUTO-GENERATED-CONTENT:START (SEM) -->
 #### :point_right: - [Programming Basics with C# - April 2017](#programming-basics)
 #### :point_right: - [Programming Fundamentals - Extended - March 2018](#programming-fundamentals)
-#### :point_right: - [C# Advanced - September 2018](c#-advanced)
-#### :point_right: - [C# OOP Basics - October 2018](c#-oop-basics)
-#### :point_right: - [C# OOP Advanced - November 2018](c#-oop-advanced)
-#### :point_right: - [Databases Basics - MS SQL Server - January 2019 ](databases-basic-ms-sql-server)
-#### :point_right: - [Databases Advanced - Entity Framework - February 2019 ](databases-advanced-entity-framework)
-#### :point_right: - [C# Web Development Basics - May 2019](c#-webn-basics)
-#### :point_right: - [C# MVC Frameworks - ASP.NET Core - July 2019](asp.net-core-mvc)
+#### :point_right: - [C# Advanced - September 2018](#c-advanced)
+#### :point_right: - [C# OOP Basics - October 2018](#c-oop-basics)
+#### :point_right: - [C# OOP Advanced - November 2018](#c-oop-advanced)
+#### :point_right: - [Databases Basics MS SQL Server - January 2019 ](#databases-basics-ms-sql-server)
+#### :point_right: - [Databases Advanced Entity Framework - February 2019 ](#databases-advanced-entity-framework)
+#### :point_right: - [C# Web Development Basics - May 2019](#c-web-basics)
+#### :point_right: - [C# MVC Frameworks ASP. NET Core - July 2019](#asp.-net-core-mvc)
 
 
 # Programming Basics
@@ -126,7 +125,7 @@ sometext......
 ### :heavy_check_mark: [Certificate](https://softuni.bg/certificates/details/61763/b60f9c99)
 
 
-# Databases Basics - MS SQL Server
+# Databases Basics MS SQL Server
 
 
 ### :notebook_with_decorative_cover:	 Topics
@@ -149,7 +148,7 @@ sometext......
 ### :heavy_check_mark: [Certificate](https://softuni.bg/certificates/details/62745/25062d08)
 
 
-# Databases Advanced - Entity Framework
+# Databases Advanced Entity Framework
 
 
 ### :notebook_with_decorative_cover:	 Topics
@@ -196,10 +195,10 @@ sometext......
 
 > XML
 
-### :heavy_check_mark: [Certificate]
+### :heavy_check_mark: [Certificate]()
 
 
-# ASP.NET Core MVC
+# ASP. NET Core MVC
 
 
 ### :notebook_with_decorative_cover:	 Topics
